@@ -1,0 +1,3 @@
+com\kapil\web\controller\WelcomeController.class
+com\kapil\web\config\SpringConfig.class
+com\kapil\web\WebInitializer.class
