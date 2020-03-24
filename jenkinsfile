@@ -23,7 +23,7 @@ pipeline {
     spec: '''{
           "files": [
             {
-              "pattern": "*src/*pom*.xml",
+              "pattern": "*.war",
               "target": "kapil"
             }
          ]
