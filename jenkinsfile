@@ -19,7 +19,7 @@ pipeline {
 
           stage('deployment stage') {
               steps {
-                bat "mvn package"
+                bat "mvn jetty:run verify sonar:sonar"
         }
     }
     }
