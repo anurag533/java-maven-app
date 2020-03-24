@@ -16,6 +16,22 @@ pipeline {
                 bat "mvn test verify sonar:sonar"
         }
     }
+    stage('artifactory') {
+    steps{
+    rtUpload (
+    serverId: 'Artifactory-1',
+    spec: '''{
+          "files": [
+            {
+              "pattern": "*src/*pom*.xml",
+              "target": "kapil"
+            }
+         ]
+    }'''
+    
+    )
+    }
+    }
 
           stage('deployment stage') {
               steps {
