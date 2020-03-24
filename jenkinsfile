@@ -24,7 +24,7 @@ pipeline {
           "files": [
             {
               "pattern": "*.war",
-              "target": "kapil"
+              "target": "kapil/"
             }
          ]
     }'''
