@@ -23,8 +23,8 @@ pipeline {
     spec: '''{
           "files": [
             {
-              "pattern": "*.war",
-              "target": "folder/kapil/"
+              "pattern": "java-maven-app/pom.xml",
+              "target": "libs-release-local/"
             }
          ]
     }'''
