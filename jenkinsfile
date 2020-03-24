@@ -24,7 +24,7 @@ pipeline {
           "files": [
             {
               "pattern": "java-maven-app/pom.xml",
-              "target": "libs-release/"
+              "target": "libs-snapshot/"
             }
          ]
     }'''
