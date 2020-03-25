@@ -31,7 +31,13 @@ pipeline {
                     releaseRepo: "libs-release",
                     snapshotRepo: "libs-snapshot"
                 )
-                
+                 rtMavenRun (
+                  
+                    pom: 'java-maven-app/pom.xml',
+                    goals: 'clean install',
+                    deployerId: "MAVEN_DEPLOYER",
+                    resolverId: "MAVEN_RESOLVER"
+                )
                  rtPublishBuildInfo (
                     serverId: "art-1"
                     )
