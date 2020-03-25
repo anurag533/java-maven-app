@@ -34,6 +34,7 @@ pipeline {
                 
                  rtPublishBuildInfo (
                     serverId: "art-1"
+                    )
     }
     }
 
