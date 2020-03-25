@@ -32,8 +32,8 @@ pipeline {
                     snapshotRepo: "libs-snapshot"
                 )
                  rtMavenRun (
-                  
-                    pom: 'java-maven-app/pom.xml',
+                  tool:apache-maven-3.6.3,
+                    pom: 'pom.xml',
                     goals: 'clean install',
                     deployerId: "MAVEN_DEPLOYER",
                     resolverId: "MAVEN_RESOLVER"
