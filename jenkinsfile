@@ -18,6 +18,13 @@ pipeline {
     }
     stage('artifactory') {
     steps{
+    
+    rtServer (
+    id: 'Artifactory-1',
+    url: 'http://my-artifactory-domain/artifactory',
+    // If you're using username and password:
+    username: 'admin',
+    password: 'wordjfrog')
                  rtMavenDeployer (
                     id: "MAVEN_DEPLOYER",
                     serverId: "art-1",
