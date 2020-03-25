@@ -7,13 +7,19 @@ pipeline {
     stages {
         stage('Compile stage') {
             steps {
-                bat "mvn compile verify sonar:sonar" 
+                bat "mvn compile" 
         }
     }
 
          stage('testing stage') {
              steps {
-                bat "mvn test verify sonar:sonar"
+                bat "mvn test"
+        }
+    }
+    stage('Sonar')
+    {
+        steps{
+        bat "mvn verify sonar:sonar"
         }
     }
     stage('artifactory') {
