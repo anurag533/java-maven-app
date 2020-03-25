@@ -18,13 +18,6 @@ pipeline {
     }
     stage('artifactory') {
     steps{
-    
-    rtServer (
-    id: 'art-1',
-    url: 'http://my-artifactory-domain/artifactory',
-    // If you're using username and password:
-    username: 'admin',
-    password: 'wordjfrog')
                  rtMavenDeployer (
                     id: "MAVEN_DEPLOYER",
                     serverId: "art-1",
@@ -35,12 +28,6 @@ pipeline {
                 rtMavenResolver (
                     id: "MAVEN_RESOLVER",
                     serverId: "art-1",
-                    releaseRepo: "libs-release",
-                    snapshotRepo: "libs-snapshot"
-                )
-                rtMavenResolver (
-                    id: "MAVEN_RESOLVER",
-                    serverId: "ARTIFACTORY_SERVER",
                     releaseRepo: "libs-release",
                     snapshotRepo: "libs-snapshot"
                 )
