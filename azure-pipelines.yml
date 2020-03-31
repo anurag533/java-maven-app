@@ -19,4 +19,14 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'compile test package'
+    goals: 'package'
+    steps:
+- script: |
+    echo Starting the build
+    mvn compile
+  displayName: 'Build with Maven'
+    steps:
+- script: |
+    echo Starting the build
+    mvn test
+  displayName: 'Build with Maven'
