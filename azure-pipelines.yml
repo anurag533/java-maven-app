@@ -33,12 +33,4 @@ steps:
     mvn package
   displayName: 'package'
 
-- script: |
-    echo Starting the build
-    mvn tomcat7:run
-  displayName: 'run'
 
-- script: |
-    echo Starting the build
-    mvn tomcat7:run
-  displayName: 'run'
