@@ -21,10 +21,11 @@ pipeline {
         }
     }
         stage('SonarQube analysis') {
-
+            steps{
     withSonarQubeEnv('My SonarQube Server') { // If you have configured more than one global server connection, you can specify its name
       bat "${scannerHome}/bin/sonar-scanner"
     }
+            }
   }
    
 
