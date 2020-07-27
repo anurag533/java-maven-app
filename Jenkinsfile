@@ -29,13 +29,13 @@ pipeline {
         }
 
 
-        stage('SonarQube analysis') {
-            steps{
-    withSonarQubeEnv('sonarqube') { // If you have configured more than one global server connection, you can specify its name
+       // stage('SonarQube analysis') {
+      //      steps{
+   // withSonarQubeEnv('sonarqube') { // If you have configured more than one global server connection, you can specify its name
         
-        bat 'mvn sonar:sonar'
-         }
-        }
+     //   bat 'mvn sonar:sonar'
+     //    }
+     //   }
   }
     }
    
