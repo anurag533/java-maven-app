@@ -27,6 +27,13 @@ pipeline {
                 )
             }
         }
+             stage ('Publish build info') {
+            steps {
+                rtPublishBuildInfo (
+                    serverId: 'art-1'// Obtain an Artifactory server instance, defined in Jenkins --> Manage:
+                )
+            }
+        }
 
 
        // stage('SonarQube analysis') {
