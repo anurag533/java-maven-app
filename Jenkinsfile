@@ -20,7 +20,7 @@ pipeline {
                             "files": [
                                     {
                                         "pattern": "target/*.war",
-                                        "target": "java-maven/"
+                                        "target": "kapil/"
                                     }
                                 ]
                             }"""
