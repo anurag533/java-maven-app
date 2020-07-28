@@ -3,20 +3,14 @@ pipeline {
     agent any
    
         stages{
-        stage('compile') {
+        stage('Build') {
             steps{
    
-       bat 'mvn compile'
+       bat 'mvn clean install'
  
             }
   }
-               stage('test') {
-            steps{
-   
-       bat 'mvn test'
- 
-            }
-  }
+               
             
                    stage('SonarQube analysis') {
            steps{
