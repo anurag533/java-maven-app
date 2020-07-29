@@ -1,15 +1,13 @@
 pipeline {
 
     agent any
+      tools {
+        maven 'apache-maven-3.6.3' 
+    }
     
    
         stages{
-            stage("Checkout") {
-                	steps {
-                		git branch: 'master',
-                		url: 'https://github.com/kapilnegi98/java-maven-app.git'
-                  	}
-              }
+         
             
         stage('Build') {
             steps{
