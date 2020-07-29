@@ -1,6 +1,12 @@
 pipeline {
 
     agent any
+    stage("Code Checkout") {
+                	steps {
+                		git branch: 'master',
+                		url: 'https://github.com/kapilnegi98/java-maven-app.git'
+                  	}
+              }
    
         stages{
         stage('Build') {
