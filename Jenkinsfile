@@ -4,7 +4,7 @@ pipeline {
     
    
         stages{
-            stage("Code Checkout") {
+            stage("Checkout") {
                 	steps {
                 		git branch: 'master',
                 		url: 'https://github.com/kapilnegi98/java-maven-app.git'
@@ -38,7 +38,7 @@ pipeline {
                     spec: """{
                             "files": [
                                     {
-                                        "pattern": "target/*.war",
+                                        "pattern": "*/*.war",
                                         "target": "kapil/"
                                     }
                                 ]
